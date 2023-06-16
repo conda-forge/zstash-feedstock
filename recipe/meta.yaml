@@ -8,8 +8,6 @@ package:
 source:
   url: https://github.com/E3SM-Project/zstash/archive/v{{ version }}.tar.gz
   sha256: 00d7dd5233c69282a4ff04d90c6a77bea9f676588fc8c8b488613c50142c4617
-  patches: 
-    - patches/fix-setup-py.patch
 
 build:
   number: 0
