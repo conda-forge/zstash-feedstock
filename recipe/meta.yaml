@@ -1,5 +1,5 @@
 {% set name = "zstash" %}
-{% set version = "1.3.0" %}
+{% set version = "1.4.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,9 +7,7 @@ package:
 
 source:
   url: https://github.com/E3SM-Project/zstash/archive/v{{ version }}.tar.gz
-  sha256: 16d4169dcf49057ac86fb78410bffbc9ceba7680f73d4f88659992c18376cb63
-  patches: 
-    - patches/fix-setup-py.patch
+  sha256: 5f903e2c8d28883185d53a6aab846aa0fed57aa9264543c12a5bcd1884f31b5e
 
 build:
   number: 0
@@ -23,9 +21,9 @@ requirements:
 
   run:
     - python >=3.6
-    - six
-    - globus-sdk >=3.0.0,<4.0.0
     - fair-research-login >=0.2.6,<0.3.0
+    - globus-sdk >=3.0.0,<4.0.0
+    - six
 
 test:
   imports:
