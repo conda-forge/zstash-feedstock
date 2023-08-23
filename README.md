@@ -1,11 +1,11 @@
-About zstash
-============
+About zstash-feedstock
+======================
+
+Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/zstash-feedstock/blob/main/LICENSE.txt)
 
 Home: https://github.com/E3SM-Project/zstash
 
 Package license: BSD-3-Clause and custom
-
-Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/zstash-feedstock/blob/main/LICENSE.txt)
 
 Summary: Long term HPSS archiving tool for E3SM
 
