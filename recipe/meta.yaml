@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://github.com/E3SM-Project/zstash/archive/v{{ version }}.tar.gz
-  sha256: 250fd1b566f7334798062caed7f6a60a82b03fbc2f0ca51f8f14c40250351ce5
+  sha256: 873c399d60bef1d23bc6c9c38104632e87e022d449ef22aed83959820bbf1406
 
 build:
   number: 0
