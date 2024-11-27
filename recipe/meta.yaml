@@ -10,17 +10,17 @@ source:
   sha256: fbdc4ffe18041d1488970de45dbe9893f47da1d5d127703fefc38c2af682b536
 
 build:
-  number: 0
+  number: 1
   script: "{{ PYTHON }} -m pip install . --no-deps -vv"
   noarch: python
 
 requirements:
   host:
-    - python >=3.6
+    - python {{ python_min }}
     - pip
 
   run:
-    - python >=3.6
+    - python >={{ python_min }}
     - fair-research-login >=0.2.6,<0.3.0
     - globus-sdk >=3.0.0,<4.0.0
     - six
@@ -33,6 +33,7 @@ test:
     - pip check
   requires:
     - pip
+    - python {{ python_min }}
 
 about:
   home: https://github.com/E3SM-Project/zstash
