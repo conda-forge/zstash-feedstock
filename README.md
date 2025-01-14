@@ -32,14 +32,14 @@ Current release info
 Installing zstash
 =================
 
-Installing `zstash` from the `conda-forge` channel can be achieved by adding `conda-forge` to your channels with:
+Installing `zstash` from the `conda-forge/label/zstash_dev` channel can be achieved by adding `conda-forge/label/zstash_dev` to your channels with:
 
 ```
-conda config --add channels conda-forge
+conda config --add channels conda-forge/label/zstash_dev
 conda config --set channel_priority strict
 ```
 
-Once the `conda-forge` channel has been enabled, `zstash` can be installed with `conda`:
+Once the `conda-forge/label/zstash_dev` channel has been enabled, `zstash` can be installed with `conda`:
 
 ```
 conda install zstash
@@ -54,26 +54,26 @@ mamba install zstash
 It is possible to list all of the versions of `zstash` available on your platform with `conda`:
 
 ```
-conda search zstash --channel conda-forge
+conda search zstash --channel conda-forge/label/zstash_dev
 ```
 
 or with `mamba`:
 
 ```
-mamba search zstash --channel conda-forge
+mamba search zstash --channel conda-forge/label/zstash_dev
 ```
 
 Alternatively, `mamba repoquery` may provide more information:
 
 ```
 # Search all versions available on your platform:
-mamba repoquery search zstash --channel conda-forge
+mamba repoquery search zstash --channel conda-forge/label/zstash_dev
 
 # List packages depending on `zstash`:
-mamba repoquery whoneeds zstash --channel conda-forge
+mamba repoquery whoneeds zstash --channel conda-forge/label/zstash_dev
 
 # List dependencies of `zstash`:
-mamba repoquery depends zstash --channel conda-forge
+mamba repoquery depends zstash --channel conda-forge/label/zstash_dev
 ```
 
 
