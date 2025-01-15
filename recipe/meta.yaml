@@ -1,13 +1,13 @@
 {% set name = "zstash" %}
-{% set version = "1.4.2rc1" %}
+{% set version = "1.4.4rc1" %}
 
 package:
   name: {{ name|lower }}
   version: {{ version }}
 
 source:
-  url: https://github.com/E3SM-Project/zstash/archive/refs/tags/v{{ version }}.tar.gz
-  sha256: 7a820a7b7d93ea5ab633e7fcefc7fe37107ff61e025a45597ade6af39bc179d2
+  url: https://github.com/E3SM-Project/zstash/archive/v{{ version }}.tar.gz
+  sha256: 726098c4f1deae9126c4ad80d4d37ab0a049d5b881bf8ffd3aa20d781b8e5bc9
 
 build:
   number: 0
@@ -16,23 +16,27 @@ build:
 
 requirements:
   host:
-    - python >=3.6
+    - python {{ python_min }}
     - pip
+    - setuptools
 
   run:
-    - python >=3.6
-    - six
-    - globus-sdk >=3.0.0,<4.0.0
+    - python >={{ python_min }}
     - fair-research-login >=0.2.6,<0.3.0
+    - globus-sdk >=3.0.0,<4.0.0
+    - six
 
 test:
   imports:
     - zstash
   commands:
     - zstash --help
-    - pip check
+    # Disabled until we update fair-research-login because of typo:
+    # https://github.com/fair-research/native-login/blob/v0.2.6/requirements.txt
+    # - pip check
   requires:
     - pip
+    - python {{ python_min }}
 
 about:
   home: https://github.com/E3SM-Project/zstash
