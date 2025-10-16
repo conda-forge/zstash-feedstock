@@ -1,5 +1,5 @@
 {% set name = "zstash" %}
-{% set version = "1.5.0rc1" %}
+{% set version = "1.5.0rc2" %}
 {% set python_min = "3.11" %}
 
 package:
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://github.com/E3SM-Project/zstash/archive/v{{ version }}.tar.gz
-  sha256: 0deda016d8ba4fb5f4051d3a01516a3d38cc28dc7beb09ac54515955313d96e7
+  sha256: fb04a775bd8d5f0b2f38cc270b275dc0f738967bd831ca09f14f31c1a27ecc31
 
 build:
   number: 0
