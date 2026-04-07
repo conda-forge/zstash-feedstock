@@ -1,5 +1,5 @@
 {% set name = "zstash" %}
-{% set version = "1.5.0rc4" %}
+{% set version = "1.6.0rc1" %}
 {% set python_min = "3.11" %}
 
 package:
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://github.com/E3SM-Project/zstash/archive/v{{ version }}.tar.gz
-  sha256: fc2d28d6623e400e2c81ffdae296a559ba0c008f66692fcbfb34f653bac40c41
+  sha256: 1f0d08b264dd8bf06266369b0377ea3a44519c674781f1e402626f0a2974173a
 
 build:
   number: 0
@@ -22,7 +22,7 @@ requirements:
     - setuptools
 
   run:
-    - python >={{ python_min }}
+    - python >={{ python_min }},<3.15
     - sqlite
     - six >=1.16.0
     - globus-sdk >=3.15.0,<4.0
