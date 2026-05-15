@@ -5,7 +5,7 @@ Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/zstash-feedstoc
 
 Home: https://github.com/E3SM-Project/zstash
 
-Package license: BSD-3-Clause and custom
+Package license: BSD-3-Clause and LicenseRef-Custom
 
 Summary: Long term HPSS archiving tool for E3SM
 
