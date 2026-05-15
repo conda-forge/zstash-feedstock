@@ -1,5 +1,5 @@
 {% set name = "zstash" %}
-{% set version = "1.5.0" %}
+{% set version = "1.6.0" %}
 {% set python_min = "3.11" %}
 
 package:
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://github.com/E3SM-Project/zstash/archive/v{{ version }}.tar.gz
-  sha256: 96de85bd0bdb4e2fb6274fb345f03a3cbb70fe8012a67b1018c22d86ca2e94af
+  sha256: 0cc846592503f0b82925a2494dedf50b5b838fed2541998b2227a64e26d190ed
 
 build:
   number: 0
@@ -22,7 +22,7 @@ requirements:
     - setuptools
 
   run:
-    - python >={{ python_min }},<3.14
+    - python >={{ python_min }},<3.15
     - sqlite
     - six >=1.16.0
     - globus-sdk >=3.15.0,<4.0.0
@@ -42,7 +42,7 @@ test:
 about:
   home: https://github.com/E3SM-Project/zstash
   summary: 'Long term HPSS archiving tool for E3SM'
-  license: BSD-3-Clause and custom
+  license: BSD-3-Clause and LicenseRef-Custom
   license_file:
     - LICENSE
     - NOTICE
