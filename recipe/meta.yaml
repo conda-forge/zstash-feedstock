@@ -22,7 +22,7 @@ requirements:
     - setuptools
 
   run:
-    - python >={{ python_min }},<3.14
+    - python >={{ python_min }},<3.15
     - sqlite
     - six >=1.16.0
     - globus-sdk >=3.15.0,<4.0.0
@@ -42,7 +42,7 @@ test:
 about:
   home: https://github.com/E3SM-Project/zstash
   summary: 'Long term HPSS archiving tool for E3SM'
-  license: BSD-3-Clause and custom
+  license: BSD-3-Clause and LicenseRef-Custom
   license_file:
     - LICENSE
     - NOTICE
