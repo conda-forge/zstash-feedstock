@@ -5,7 +5,7 @@ Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/zstash-feedstoc
 
 Home: https://github.com/E3SM-Project/zstash
 
-Package license: BSD-3-Clause and custom
+Package license: BSD-3-Clause and LicenseRef-Custom
 
 Summary: Long term HPSS archiving tool for E3SM
 
@@ -16,7 +16,9 @@ Current build status
 <table><tr>
     <td>All platforms:</td>
     <td>
-      <img src="https://img.shields.io/badge/noarch-disabled-lightgrey.svg" alt="noarch disabled">
+      <a href="https://github.com/conda-forge/zstash-feedstock/actions/workflows/conda-build.yml">
+        <img src="https://github.com/conda-forge/zstash-feedstock/actions/workflows/conda-build.yml/badge.svg?event=push&branch=main">
+      </a>
     </td>
   </tr>
 </table>
@@ -38,31 +40,73 @@ conda config --add channels conda-forge/label/zstash_dev
 conda config --set channel_priority strict
 ```
 
-Once the `conda-forge/label/zstash_dev` channel has been enabled, `zstash` can be installed with `conda`:
+How to use
+----------
+
+<details>
+<summary>With conda</summary>
 
 ```
 conda install zstash
 ```
 
-or with `mamba`:
+</details>
+
+<details>
+<summary>With mamba</summary>
 
 ```
 mamba install zstash
 ```
 
-It is possible to list all of the versions of `zstash` available on your platform with `conda`:
+</details>
+
+<details>
+<summary>With pixi</summary>
+
+```
+# for adding to your local project
+pixi add zstash
+# for installing globally
+pixi global install zstash
+```
+
+</details>
+
+Search package versions
+-----------------------
+
+It is possible to list all of the versions of `zstash` available on your platform:
+
+<details>
+<summary>With conda</summary>
 
 ```
 conda search zstash --channel conda-forge/label/zstash_dev
 ```
 
-or with `mamba`:
+</details>
+
+<details>
+<summary>With mamba</summary>
 
 ```
 mamba search zstash --channel conda-forge/label/zstash_dev
 ```
 
-Alternatively, `mamba repoquery` may provide more information:
+</details>
+
+<details>
+<summary>With pixi</summary>
+
+```
+pixi search zstash --channel conda-forge/label/zstash_dev
+```
+
+</details>
+
+<details>
+<summary>With mamba repoquery, which may provide more information</summary>
 
 ```
 # Search all versions available on your platform:
@@ -74,6 +118,8 @@ mamba repoquery whoneeds zstash --channel conda-forge/label/zstash_dev
 # List dependencies of `zstash`:
 mamba repoquery depends zstash --channel conda-forge/label/zstash_dev
 ```
+
+</details>
 
 
 About conda-forge
@@ -142,6 +188,7 @@ In order to produce a uniquely identifiable distribution:
 Feedstock Maintainers
 =====================
 
+* [@andrewdnolan](https://github.com/andrewdnolan/)
 * [@chengzhuzhang](https://github.com/chengzhuzhang/)
 * [@forsyth2](https://github.com/forsyth2/)
 * [@mahf708](https://github.com/mahf708/)
