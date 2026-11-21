@@ -2,7 +2,7 @@ schema_version: 1
 
 context:
   name: zstash
-  version: "1.6.0"
+  version: "1.6.1"
   python_min: "3.11"
 
 package:
@@ -11,10 +11,10 @@ package:
 
 source:
   url: https://github.com/E3SM-Project/zstash/archive/v${{ version }}.tar.gz
-  sha256: 0cc846592503f0b82925a2494dedf50b5b838fed2541998b2227a64e26d190ed
+  sha256: 7a9fff054c2af611e282c96bbd96f9cffbe9f2f6c432eb2c7a23a98ae9c6685f
 
 build:
-  number: 1
+  number: 0
   noarch: python
   script: ${{ PYTHON }} -m pip install . --no-deps -vv
 
@@ -34,7 +34,7 @@ tests:
       imports:
         - zstash
       pip_check: false
-      python_version: 
+      python_version:
         - ${{ python_min }}
         - "*"
   - requirements:
